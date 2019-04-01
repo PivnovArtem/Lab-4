@@ -60,7 +60,7 @@ public class Client extends AbstractVerticle {
 
     public static void main(String[] args){
         Vertx.clusteredVertx(new VertxOptions(), (event ->
-                event.result().deployVerticle(new NotMainVerticle(), new DeploymentOptions().setWorker(false))));
+                event.result().deployVerticle(new Client(), new DeploymentOptions().setWorker(false))));
     }
 }
 
